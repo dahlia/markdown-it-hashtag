@@ -6,7 +6,7 @@ Changelog
 Version 0.2.0
 -------------
 
-To be released.
+Released on May 24, 2024.
 
  -  Now non-Latin words can be hashtagged.  For example, `#태그` is now
     recognized as a hashtag.
