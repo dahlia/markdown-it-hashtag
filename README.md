@@ -3,6 +3,10 @@
 @fedify/markdown-it-hashtag
 ===========================
 
+[![JSR][JSR badge]][JSR]
+[![npm][npm badge]][npm]
+[![GitHub Actions][GitHub Actions badge]][GitHub Actions]
+
 This is a [markdown-it] plugin that parses and renders Mastodon-style #hashtags.
 It converts, for example, `#FooBar` into a link:
 
@@ -11,7 +15,7 @@ It converts, for example, `#FooBar` into a link:
 ~~~~
 
 The value of `href` attributes, other attributes (if any), and the content of
-the link can be customized by passing options to the plugin:
+the link can be customized by passing [options] to the plugin:
 
 ~~~~ typescript
 import MarkdownIt from "markdown-it";
@@ -37,7 +41,14 @@ md.render(
 console.log(env.hashtags);  // ["#FooBar", "#BazQux"]
 ~~~~
 
+[JSR]: https://jsr.io/@fedify/markdown-it-hashtag
+[JSR badge]: https://jsr.io/badges/@fedify/markdown-it-hashtag
+[npm]: https://www.npmjs.com/package/@fedify/markdown-it-hashtag
+[npm badge]: https://img.shields.io/npm/v/%40fedify%2Fmarkdown-it-hashtag?logo=npm
+[GitHub Actions]: https://github.com/dahlia/markdown-it-hashtag/actions/workflows/main.yaml
+[GitHub Actions badge]: https://github.com/dahlia/markdown-it-hashtag/actions/workflows/main.yaml/badge.svg
 [markdown-it]: https://github.com/markdown-it/markdown-it
+[options]: https://jsr.io/@fedify/markdown-it-hashtag/doc/~/PluginOptions
 
 
 Installation
