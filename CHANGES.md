@@ -6,4 +6,4 @@ Changelog
 Version 0.1.0
 -------------
 
-To be released.
+Released on May 24, 2024.  Initial release.
