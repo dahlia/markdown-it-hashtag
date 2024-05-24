@@ -72,7 +72,7 @@ function parseHashtag(state: StateCore, options?: PluginOptions) {
   }
 }
 
-const HASHTAG_PATTERN = /#\w+/g;
+const HASHTAG_PATTERN = /#[\w\p{L}]+/giu;
 
 function splitTokens(
   token: Token,

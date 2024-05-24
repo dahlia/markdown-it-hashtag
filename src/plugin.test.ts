@@ -13,7 +13,9 @@ Deno.test("hashtag()", () => {
     `\
 **Hello**, *#FooBar*!
 
-> #BazQux
+> #Baz_Qux
+>
+> #테스트
 
 [This should be ignored: #FooBar](https://example.com/)
 
@@ -23,14 +25,16 @@ Deno.test("hashtag()", () => {
   );
   assertEquals(env.hashtags, [
     "#FooBar",
-    "#BazQux",
+    "#Baz_Qux",
+    "#테스트",
   ]);
   assertEquals(
     html,
     `\
 <p><strong>Hello</strong>, <em><a  href="#FooBar"><span class="hash">#</span><span class="tag">FooBar</span></a></em>!</p>
 <blockquote>
-<p><a  href="#BazQux"><span class="hash">#</span><span class="tag">BazQux</span></a></p>
+<p><a  href="#Baz_Qux"><span class="hash">#</span><span class="tag">Baz_Qux</span></a></p>
+<p><a  href="#테스트"><span class="hash">#</span><span class="tag">테스트</span></a></p>
 </blockquote>
 <p><a href="https://example.com/">This should be ignored: #FooBar</a></p>
 <p><a href="">This also should be ignored: #FooBar</a></p>
